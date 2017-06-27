@@ -1,0 +1,21 @@
+{
+  "name": "Thor",
+  "description": "Select Job desc ID and open in new tab",
+  "version": "3.0.0",
+
+  "manifest_version": 2,
+
+  "permissions": ["contextMenus"],
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["jquery.js", "content.js"],
+    "matches": ["https://blog.lateral.io/*"]
+  }]
+}
