@@ -1,6 +1,6 @@
 {
   "name": "Thor",
-  "description": "Select Job desc ID and open in new tab",
+  "description": "Change job ID in view active jobs page into a link",
   "version": "3.0.0",
 
   "manifest_version": 2,
@@ -14,7 +14,6 @@
   },
 
   "content_scripts": [{
-    "css": ["styles.css"],
     "js": ["jquery.js", "content.js"],
     "matches": ["https://blog.lateral.io/*"]
   }]
