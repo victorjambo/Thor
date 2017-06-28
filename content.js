@@ -17,21 +17,10 @@ function getElementsByXpath(xpath){
   return(list);
 }
 
-var myArray = getElementsByXpath('//h1[@class="entry-title"]');
+//get an array of the elements to be modified
+var myArray = getElementsByXpath('//table[@class="previewResult"]/tbody/tr/td[@class][1]/div[1]/span[2]');
 for ( var i=0 ; i < myArray.length; i++ )
 {
-  $(myArray[i]).html('<a href="https://www.google.com/#q='+myArray[i].textContent+'">'+myArray[i].textContent+'</a>');
+	//Changes the text content inside the selected element
+  $(myArray[i]).html('<a target="_blank" href="https://www.glassdoor.com/job-listing/JV.htm?jl='+myArray[i].textContent+'">'+myArray[i].textContent+'</a>');
 }
-/*
-function getElementByXpath(path) {
-  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-}
-//test 2. to delete
-var tContent = $(".blog-title").text();
-
-alert("Hello" + xpath.textContent); // test. to delete
-//test 3. use the gd xpath
-var xpath = getElementByXpath('//h1[@class="entry-title"]');
-//test 4. place the glassdoor url here. change victor jambo to xpath.textContent.
-$(xpath).html('<a href="https://www.google.com/#q='+xpath.textContent+'">Victor jambo</a>');
-*/
